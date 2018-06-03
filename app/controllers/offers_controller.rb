@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-before_action :authenticate_user!, except: [:index, :search, :show]
+before_action :authenticate_user!, except: [:index, :search]
   def index
     @offers = Offer.all.order("created_at DESC").page(params[:page]).per(25)
   end
@@ -60,7 +60,7 @@ before_action :authenticate_user!, except: [:index, :search, :show]
     def myoffers
       @offers = Offer.where(user_id: current_user).order(created_at: :desc)
     end
-    
+
 
   private
 

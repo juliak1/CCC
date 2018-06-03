@@ -5,7 +5,7 @@ def create
 		@proposal = @offer.proposals.build(proposal_params)
 	 	@proposal.save
 		redirect_to @proposal.offer
-		
+				
 	end
 
 	def edit
