@@ -1,0 +1,36 @@
+<%= render "shared/search" %>
+
+<div class="row content offers">
+  <div class="col-xs-12 col-sm-4 col-md-3">
+    <div class="advance-search">
+      <h3>Advanced search</h3>
+      <div class="box">
+       <P>blabla
+      </div> <!-- end box div -->
+    </div> <!-- end  div -->
+  </div> <!-- end bootstrap col -->
+  <div class="col-xs-12 col-sm-8 col-md-9">
+    <div class="offer-list">
+      <h3>Featured Offers <span class="small pull-right">1 - 25 results</span></h3>
+      <br>
+      <div class="offer-description clearfix">
+        <% @offers.each do |offer| %>
+        <div class="offer clearfix">
+          <div class="col-xs-8">
+            <p class="blue">
+              <%= link_to offer.concert, offer %>
+              
+            <p><%= offer.price %></p>
+          </div>
+          <div class="col-xs-4 text-right">
+            <p><%= offer.created_at.strftime("%d %m, %Y") %></p>
+            <p><%= offer.location %></p>
+          </div>
+        </div>
+        <% end %>
+
+        </div>
+      </div>
+      <%= render "shared/pagination"%>
+    </div>
+  </div>
