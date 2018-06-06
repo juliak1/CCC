@@ -26,6 +26,7 @@ gem 'bootstrap_form'
  gem 'rails_12factor', group: :production
 gem "recaptcha", require: "recaptcha/rails"
 gem "rails_admin"
+gem "mail_form"
 
 
 group :development, :test do

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'contact/new'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   	devise_for :users, :controllers => {:registrations => "registrations"}
 	resources :offers do
@@ -15,4 +17,8 @@ Rails.application.routes.draw do
 	get '/myoffers' => 'offers#myproposals'
 	get 'offers/:id/proposals/:id/edit', to: 'proposals#edit', as: :edit_proposal
 	put 'offers/:id/proposals/:id/edit', to: 'proposals#update'
+
+		resources :contacts, only: [:new, :create]
+
+
 end
