@@ -2,9 +2,7 @@
   <h3> Write us a message </h3>
   <br/>
 <%= form_for @contact do |f| %>
-    <% if flash[:error].present? %>
-        <p> flash[:error]</p>
-    <% end %>
+   
      <div class="form-group">
     <%= f.label :name %> <br>
     <%= f.text_field :name, required: true, class: "form-control input-lg" %>

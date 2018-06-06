@@ -128,6 +128,7 @@ html, body { background: #F5F5F5; }
     margin-right: 20px;
     background: orange;
 }
+
 }
 
 .first{
@@ -232,4 +233,23 @@ html, body { background: #F5F5F5; }
   .nickname{
   display: none;
   }
+}
+.mid{
+.about{
+      margin-top:5%;
+      text-align:center;
+          font-size: 70px ;
+      }
+      .box{
+          margin-top: 20%;
+          font-size: 20px;
+          text-align: center;
+      }
+      .leave{
+          margin-top: 20%;
+      }
+background: $navbarColor;
+  .contact{
+  color: orange !important;
+}
 }
