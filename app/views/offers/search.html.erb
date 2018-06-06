@@ -4,9 +4,22 @@
   <div class="col-xs-12 col-sm-4 col-md-3">
     <div class="advance-search">
       <h3>Advanced search</h3>
-      <div class="box">
-       <P>blabla
-      </div> <!-- end box div -->
+      <%= form_tag search_offers_path, method: :get do |f| %>
+      <div class = "form-group">
+        <lablel>Concert</lablel>
+      <%= text_field_tag :concert, nil, placeholder: "Skillet, Metallica, etc.", class: "form-control input-lg" %>
+    </div>
+    <div class = "form-group">
+        <lablel>Location</lablel>
+      <%= text_field_tag :location, nil, placeholder: "Sopot, Gdynia", class: "form-control input-lg" %>
+    </div>
+    <div class = "form-group">
+        <lablel>Max Price</lablel>
+      <%= text_field_tag :price, nil, placeholder: "20$", class: "form-control input-lg" %>
+    </div>
+    <br/>
+      <%= submit_tag "Search", class: "btn btn-warning input-lg btn-block" %>
+      <% end %>
     </div> <!-- end  div -->
   </div> <!-- end bootstrap col -->
   <div class="col-xs-12 col-sm-8 col-md-9">
