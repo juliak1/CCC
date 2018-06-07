@@ -49,7 +49,7 @@
         <div class="col-xs-12 col-md-8">
           <div class="content-inner-detail">
             <h2 class="sub-heading"> <%= @offer.concert %> <span class="text-danger"></span></h2>
-            <p>  Location: <%= @offer.location %> | Price: <%= @offer.price  %> | Posted by: <%= @offer.user.email %> <span class="label label-succes"> </span></p>
+            <p>  Location: <%= @offer.location %> | Price: <%= @offer.price  %> | Posted by:  <%= link_to @offer.user.email, user_path(@offer.user.id) %> <span class="label label-succes"> </span></p>
             <legend>Description</legend>
             <p><%= @offer.description %></p>
             <legend>Route</legend>
