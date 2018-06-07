@@ -52,6 +52,8 @@
             <p>  Location: <%= @offer.location %> | Price: <%= @offer.price  %> | Posted by: <%= @offer.user.email %> <span class="label label-succes"> </span></p>
             <legend>Description</legend>
             <p><%= @offer.description %></p>
+            <legend>Route</legend>
+            <p><%= @offer.route %></p>
           </div>
         </div>
 <% if @awarded_proposal.present? %>

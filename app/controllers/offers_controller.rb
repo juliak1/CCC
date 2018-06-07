@@ -1,7 +1,7 @@
 class OffersController < ApplicationController
 before_action :authenticate_user!, except: [:index, :search]
   def index
-    @offers = Offer.all.order("created_at DESC").page(params[:page]).per(25)
+    @offers = Offer.all.order(" open DESC, created_at DESC").page(params[:page]).per(25)
   end
 
   def new
@@ -65,6 +65,6 @@ before_action :authenticate_user!, except: [:index, :search]
   private
 
   def offer_params
-    params.require(:offer).permit(:concert, :description, :price, :location, :open, :awarded_proposal )
+    params.require(:offer).permit(:concert, :description, :route, :price, :location, :open, :awarded_proposal )
   end
 end
